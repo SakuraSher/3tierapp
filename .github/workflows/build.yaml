@@ -32,4 +32,6 @@ jobs:
         with:
           context: ${{ matrix.services.path }}
           push: true
-          tags: ${{ matrix.services.dockerhub_repo }}:${{ github.sha }}
+          tags: |
+            ${{ matrix.services.dockerhub_repo }}:${{ github.sha }}
+            ${{ matrix.services.dockerhub_repo }}:latest
