@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:13
+    image: postgres:16
     environment:
       POSTGRES_DB: devops_learning
       POSTGRES_USER: postgres

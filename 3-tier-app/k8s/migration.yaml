@@ -17,7 +17,7 @@ spec:
 
       containers:
         - name: backend
-          image: 879381241087.dkr.ecr.ap-south-1.amazonaws.com/augk8s26-backend:dafc1c583ef1f4fb2836569cc7f87ce1063b7cc4
+          image: sakurasherlocked/backend:local
           command: ["/bin/sh", "-c", "./migrate.sh"]
 
           resources:
@@ -34,12 +34,6 @@ spec:
                 secretKeyRef:
                   name: backend-secret
                   key: DB_LINK
-
-            - name: SECRET_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: backend-secret
-                  key: SECRET_KEY
 
             - name: DB_USERNAME
               valueFrom:
