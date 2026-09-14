@@ -5,6 +5,7 @@ on:
 
 jobs:
   build-push:
+    environment: dev
     strategy:
       matrix:
         services:
